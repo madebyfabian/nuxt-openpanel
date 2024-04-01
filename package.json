@@ -1,0 +1,40 @@
+{
+	"name": "nuxt-openpanel",
+	"version": "1.0.0",
+	"description": "Openpanel Analytics Module for Nuxt",
+	"repository": "madebyfabian/nuxt-openpanel",
+	"license": "MIT",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/types.d.ts",
+			"import": "./dist/module.mjs",
+			"require": "./dist/module.cjs"
+		}
+	},
+	"main": "./dist/module.cjs",
+	"types": "./dist/types.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"prepack": "nuxt-module-build build",
+		"start": "nuxi dev playground",
+		"dev": "nuxi dev playground",
+		"dev:build": "nuxi build playground",
+		"dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+		"release": "npm run prepack && changelogen --release && npm publish && git push --follow-tags"
+	},
+	"dependencies": {
+		"@nuxt/kit": "^3.11.1",
+		"@openpanel/web": "0.0.6-beta"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "latest",
+		"@nuxt/module-builder": "^0.5.5",
+		"@nuxt/schema": "^3.11.1",
+		"@types/node": "^20.11.29",
+		"changelogen": "^0.5.5",
+		"nuxt": "^3.11.1"
+	}
+}
