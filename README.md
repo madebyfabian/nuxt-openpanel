@@ -1,3 +1,6 @@
+> [!WARNING]  
+> Not compatible with @openpanel/sdk@1 since it would require a rewrite. 
+
 # Nuxt Openpanel
 
 Nuxt module for using [Openpanel](https://openpanel.dev/) in your Nuxt 3 app.
